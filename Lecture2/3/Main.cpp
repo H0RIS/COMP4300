@@ -56,7 +56,11 @@ float Student::getAvg()
 
 int main()
 {
+    Student s1;
+    Student s2("John", "Doe", 1, 3.14f);
+    Student s3("Jane", "Doe", 1234, 99.9f);
 
+    std::cout << s3.getLast() << '\n';
 
     return 0;
 }
