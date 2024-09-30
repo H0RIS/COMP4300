@@ -10,6 +10,7 @@ public:
     std::string getLast();
     int getId();
     float getAvg();
+    void print();
 
 private:
     std::string m_first = "First";
@@ -54,6 +55,11 @@ float Student::getAvg()
     return m_avg;
 }
 
+void Student::print()
+{
+    std::cout << getFirst() << " " << getLast() << " " << getId() << " " << getAvg() << std::endl;
+}
+
 int main()
 {
     Student s1;
@@ -61,6 +67,10 @@ int main()
     Student s3("Jane", "Doe", 1234, 99.9f);
 
     std::cout << s3.getLast() << '\n';
+    
+    s1.print();
+    s2.print();
+    s3.print();
 
     return 0;
 }
